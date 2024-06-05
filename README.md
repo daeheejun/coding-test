@@ -3,7 +3,7 @@
 ## ✅ 참여 방법
 
 1. <code>fork</code> 한다.
-2. 생성된 Remote Repository에 branch 를 생성한다.
+2. 생성된 Remote Repository에 <code>branch</code> 를 생성한다.
 3. base : 원본 Repository의 자신의 branch
    compare : 생성된 Repository의 자신의 branch
    ```
