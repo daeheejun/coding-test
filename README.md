@@ -6,10 +6,7 @@
 2. 생성된 Remote Repository에 <code>branch</code> 를 생성한다.
 3. base : 원본 Repository의 자신의 branch
    compare : 생성된 Repository의 자신의 branch
-   ```
-   coding-test-cs-study/coding-test base: chuseok
-   chuseok/coding-test compare: chuseok
-   ```\
+   PR을 보낸다.
 
 ## ✅ 폴더 구조
 > 문제 유형
