@@ -26,5 +26,5 @@ git commit -m "문제이름 / 난이도" -m "문제 url"
 
 ## ✅ PR 규칙
 - 제목: 이름 / 주차 / 몇 문제
-  <code>최한솔 / 1주차 / 4문제<code>
+  <code>최한솔 / 1주차 / 4문제</code>
 - comment는 자유
