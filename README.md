@@ -4,7 +4,7 @@
 
 1. <code>fork</code> 한다.
 2. 생성된 Remote Repository에 <code>branch</code> 를 생성한다.
-3. <code>base</code> : 원본 Repository의 자신의 branch
+3. <code>base</code> : 원본 Repository의 자신의 branch   
    <code>compare</code> : 생성된 Repository의 자신의 branch
    PR을 보낸다.
 
