@@ -25,8 +25,8 @@ public class Main {
             sb.append("\n");
             return;
         }
-        for(int i=0; i<n; i++) {//반복 횟수
-            results[cnt] = i+1;
+        for(int i=1; i<=n; i++) {//반복 횟수
+            results[cnt] = i;
             backTracking(cnt+1);//다음
         }
     }
