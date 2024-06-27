@@ -8,22 +8,16 @@ public class Main {
      */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         Node node = new Node(Integer.parseInt(br.readLine()));
 
-        while(true) {
-            String read = br.readLine();
-            if(read == null ||read.equals("")) break;
-
+        String read;
+        while((read = br.readLine()) != null) {
             int input = Integer.parseInt(read);
             node.insert(input);
         }
-        post(node, bw);
-
-        bw.flush();
-        bw.close();
-        br.close();
+        try
+        post();
     }
 
     /*
