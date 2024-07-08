@@ -1,0 +1,40 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.StringTokenizer;
+
+public class Main {
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st;
+    StringBuilder sb = new StringBuilder();
+    int tc = Integer.parseInt(br.readLine()); // 테스트 케이스 수
+    HashMap<String, Integer> h1 = new HashMap<>(); //<key,value>
+
+    for (int i = 0; i < tc; i++) {
+      int n = Integer.parseInt(br.readLine());
+      h1 = new HashMap<>();
+      String[] item;
+      String name = "";
+      String kind = "";
+      for (int j = 0; j < n; j++) {
+        st = new StringTokenizer(br.readLine(), " ");
+        item = new String[]{st.nextToken(),st.nextToken()};
+        name = item[0];
+        kind = item[1];
+        h1.put(kind, h1.getOrDefault(kind,0)+1);
+      }
+      int answer =1 ;
+      for(int value :h1.values())
+      {
+        answer *= value+1;
+      }
+      sb.append(answer-1).append("\n");
+    }
+    System.out.println(sb);
+  }
+
+}
+
+
