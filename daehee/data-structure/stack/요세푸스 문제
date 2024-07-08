@@ -1,0 +1,58 @@
+package data_structure.stack;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Stack;
+import java.util.StringTokenizer;
+
+public class Main {
+
+  public static void main(String[] args) throws IOException {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st = new StringTokenizer(br.readLine()," ");
+    StringBuilder sb = new StringBuilder();
+    sb.append('<');
+    int N = Integer.parseInt(st.nextToken());
+    int K = Integer.parseInt(st.nextToken());
+
+    Stack<Integer> stack1 = new Stack<>();
+    Stack<Integer> stack2 = new Stack<>();
+
+
+    for(int i =1 ; i<=N; i++)
+    {
+      stack1.push(i);
+    }
+
+
+    int idx =0;
+
+    while(true)
+    {
+
+      while(!stack2.isEmpty())
+      {
+        idx++;
+        if(idx%K==0)
+        {
+          sb.append(stack2.pop()).append(", ");
+        }
+        else
+          stack1.push(stack2.pop());
+      }
+      if(stack1.isEmpty()) break; // 탈출조건
+      while(!stack1.isEmpty())
+      {
+        stack2.push(stack1.pop());
+      }
+
+
+    }
+    sb.deleteCharAt(sb.length()-1);
+    sb.deleteCharAt(sb.length()-1);
+    sb.append('>');
+    System.out.println(sb);
+  }
+
+}
